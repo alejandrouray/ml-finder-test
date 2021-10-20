@@ -1,0 +1,23 @@
+import React from 'react';
+import ProductListItem from '../ProductListItem/ProductListItem';
+import './ProductList.sass';
+
+const ProductList = ({ products }) => {
+    return (
+        <div className="product-list__container">
+            {products && products.map(x => 
+                <ProductListItem
+                    key={x.id}
+                    id={x.id}
+                    title={x.title}
+                    price={x.price.amount}
+                    picture={x.picture}
+                    state={x.state_name}
+                />
+            )}
+        </div>
+    );
+};
+
+
+export default ProductList;
