@@ -12,10 +12,11 @@ import Search from "./pages/Search/Search";
 import Product from "./pages/Product/Product";
 
 import SearchBar from "./components/SearchBar/SearchBar";
+import { GlobalProvider } from "./context/globalContext";
 
 export default function App() {
   return (
-    <div>
+    <GlobalProvider>
       <Router>
         <SearchBar />
           <Switch>
@@ -33,6 +34,6 @@ export default function App() {
             </Route>
           </Switch>
       </Router>
-    </div>
+    </GlobalProvider>
   );
 }

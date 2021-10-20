@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
+import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import { fetchAPI } from '../../utils';
 import './Product.sass';
 
@@ -25,6 +26,7 @@ const Product = () => {
 
     return (
         <div className="product__container">
+            <Breadcrumb />
             {product.item && (
                 <div className="product__sub-container">
                     <div className="product__main">
