@@ -69,18 +69,23 @@ app.use((_, res, next) => {
 app.get('/api/items/:id', async (req, res) => {
     const { id } = req.params;
     const {...item } = await fetchAPI(`items/${id}`);
-    const { plain_text: plainText } = await fetchAPI(`items/${id}/description`);
 
-    const response = {
-        author,
-        item: {
-            ...await createInterface(item),
-            sold_quantity: item.sold_quantity,
-            description: plainText,
+    if (!item.error) {
+        const { plain_text: plainText } = await fetchAPI(`items/${id}/description`);
+    
+        const response = {
+            author,
+            item: {
+                ...await createInterface(item),
+                sold_quantity: item.sold_quantity,
+                description: plainText,
+            }
         }
+    
+        res.send(response);
+    } else {
+        res.send({ item: false })
     }
-
-    res.send(response);
 });
 
 app.get('/api/items', async (req, res) => {

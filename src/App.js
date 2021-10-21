@@ -12,6 +12,7 @@ import Product from "./pages/Product/Product";
 
 import SearchBar from "./components/SearchBar/SearchBar";
 import { GlobalProvider } from "./context/globalContext";
+import NotFound from "./pages/NotFound/NotFound";
 
 export default function App() {
   return (
@@ -28,8 +29,11 @@ export default function App() {
             <Route path="/items">
               <Search />
             </Route>
-            <Route exact path="/">
-              <Redirect to="/" />
+            <Route path="/notFound">
+              <NotFound />
+            </Route>
+            <Route exact path="/*">
+              <Redirect to="/notFound" />
             </Route>
           </Switch>
       </Router>
