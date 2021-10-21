@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
-import { fetchAPI } from '../../utils';
+import { fetchAPI, formatCurrency } from '../../utils';
 import './Product.sass';
 
 const Product = () => {
@@ -37,7 +37,7 @@ const Product = () => {
                             </span>
                             <span className="product__main-details-title">{product.item.title}</span>
                             <div className="product__main_details-price">
-                                $ {product.item.price.amount}
+                                {formatCurrency(product.item.price.amount)}
                                 <span className="product__main_details-price-decimals">{product.item.price.decimals}</span>
                             </div>
                             <button className="product__main_details-button">Comprar</button>

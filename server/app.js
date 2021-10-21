@@ -33,6 +33,13 @@ const getCategoriesFromFilters = (filters = []) => {
         : [];
 }
 
+const formatDecimals = (price) => {
+    const decimal = Math.round((price % 1) * 100);
+    return decimal < 10
+        ? `0${decimal}`
+        : decimal;
+}
+
 const createInterface = async (data) =>
     ({
         id: data.id,
@@ -40,7 +47,7 @@ const createInterface = async (data) =>
         price: {
             currency: data.currency_id,
             amount: data.price,
-            decimals: data.price % 1
+            decimals: formatDecimals(data.price)
         },
         condition: data.condition,
         free_shipping: data.shipping.free_shipping,
