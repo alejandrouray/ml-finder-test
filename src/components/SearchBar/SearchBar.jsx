@@ -13,7 +13,11 @@ const SearchBar = () => {
     };
 
     const saveData = (e) => setQuery(e.target.value);
-    const toHome = () => history.push('/');
+    const toHome = () => {
+        setQuery('');
+        document.getElementsByClassName('search-bar__input')[0].value = '';
+        history.push('/');
+    };
     const handleKeyDown = (event) => event.key === 'Enter' && sendData();
 
     return (
