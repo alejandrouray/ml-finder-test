@@ -44,7 +44,9 @@ const Product = () => {
                         </div>
                         <div className="product__main-description">
                             <span className="product__main-description-subtitle">Descripción del producto</span>
-                            <p className="product__main-description-text">{product.item.description}</p>
+                            <p className="product__main-description-text">
+                                {product.item.description || 'No existe descripción para este producto'}
+                            </p>
                         </div>
                     </div>
                 </div>
