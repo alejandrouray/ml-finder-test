@@ -1,8 +1,14 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useEffect, useState } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import ProductList from '../../components/ProductList/ProductList';
+import Loading from '../../components/Loading/Loading';
+
 import { fetchAPI } from '../../utils';
+import { useGlobalContext } from '../../context/globalContext';
+
 import './Search.sass';
 
 const useQuery = () => new URLSearchParams(useLocation().search);
@@ -10,6 +16,8 @@ const useQuery = () => new URLSearchParams(useLocation().search);
 const Search = () => {
     const query = useQuery();
     const history = useHistory();
+    const { loading, toggleLoading } = useGlobalContext();
+
     const [results, setResults] = useState([]);
     const [lastQuery, setLastQuery] = useState();
 
@@ -18,7 +26,11 @@ const Search = () => {
   
     useEffect(() => {
         const getInitialData = async () => {
-            setResults(await fetchAPI(`items?q=:${search}`));
+            const response = await toggleLoading(
+                () => fetchAPI(`items?q=:${search}`)
+            );
+            
+            setResults(response);
             setLastQuery(search);
         }
 
@@ -27,8 +39,15 @@ const Search = () => {
   
     return (
         <div className="search__container">
-            <Breadcrumb categories={results.categories} />
-            <ProductList products={results.items} />
+            {loading
+                ? <Loading />
+                : (
+                    <>
+                        <Breadcrumb categories={results.categories} />
+                        <ProductList products={results.items} />
+                    </>
+                )
+            }
         </div>
     );
 };

@@ -9,10 +9,10 @@ import {
 import Home from './pages/Home/Home';
 import Search from "./pages/Search/Search";
 import Product from "./pages/Product/Product";
+import NotFound from "./pages/NotFound/NotFound";
 
 import SearchBar from "./components/SearchBar/SearchBar";
 import { GlobalProvider } from "./context/globalContext";
-import NotFound from "./pages/NotFound/NotFound";
 
 export default function App() {
   return (
