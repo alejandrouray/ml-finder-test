@@ -5,6 +5,7 @@ import { useHistory, useLocation } from 'react-router-dom';
 import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
 import ProductList from '../../components/ProductList/ProductList';
 import Loading from '../../components/Loading/Loading';
+import Error from '../../components/Error/Error';
 
 import { fetchAPI } from '../../utils';
 import { useGlobalContext } from '../../context/globalContext';
@@ -18,7 +19,7 @@ const Search = () => {
     const history = useHistory();
     const { loading, toggleLoading } = useGlobalContext();
 
-    const [results, setResults] = useState([]);
+    const [results, setResults] = useState();
     const [lastQuery, setLastQuery] = useState();
 
     const search = query.get('search');
@@ -42,10 +43,13 @@ const Search = () => {
             {loading
                 ? <Loading />
                 : (
-                    <>
-                        <Breadcrumb categories={results.categories} />
-                        <ProductList products={results.items} />
-                    </>
+                    results && results.items.length 
+                        ? (
+                            <>
+                                <Breadcrumb categories={results.categories} />
+                                <ProductList products={results.items} />
+                            </>
+                        ) : <Error />
                 )
             }
         </div>

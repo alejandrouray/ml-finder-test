@@ -1,5 +1,5 @@
 import React, {
-    createContext, useContext, useState, useEffect, useMemo,
+    createContext, useContext, useState, useMemo,
   } from 'react';
   
 const GlobalContext = createContext();
