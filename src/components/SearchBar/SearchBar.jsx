@@ -22,7 +22,12 @@ const SearchBar = () => {
 
     return (
         <div className="search-bar__container">
-            <img className="search-bar__logo" src="logo.png" alt="Logo Mercado Libre" onClick={toHome} />
+            <img
+                alt="Logo Mercado Libre"
+                className="search-bar__logo"
+                onClick={toHome}
+                src="logo.png"
+            />
             <input 
                 className="search-bar__input"
                 placeholder="Nunca dejes de buscar"
