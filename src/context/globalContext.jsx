@@ -1,36 +1,36 @@
 import React, {
-    createContext, useContext, useState, useMemo,
-  } from 'react';
-  
+  createContext, useContext, useState, useMemo,
+} from 'react';
+
 const GlobalContext = createContext();
 
 export const GlobalProvider = (props) => {
-    const [breadcrumb, setBreadcrumb] = useState(null);
-    const [loading, setLoading] = useState(false);
+  const [breadcrumb, setBreadcrumb] = useState(null);
+  const [loading, setLoading] = useState(false);
 
-    const toggleLoading = async (asyncFunc) => {
-        setLoading(true);
-        const response = await asyncFunc();
-        setLoading(false);
-        
-        return response;
-    }
+  const toggleLoading = async (asyncFunc) => {
+    setLoading(true);
+    const response = await asyncFunc();
+    setLoading(false);
 
-    const value = useMemo(() => ({
-        loading,
-        toggleLoading,
-        breadcrumb,
-        setBreadcrumb,
-    }), [breadcrumb, loading]);
+    return response;
+  };
 
-    return <GlobalContext.Provider value={value} {...props} />;
+  const value = useMemo(() => ({
+    loading,
+    toggleLoading,
+    breadcrumb,
+    setBreadcrumb,
+  }), [breadcrumb, loading]);
+
+  return <GlobalContext.Provider value={value} {...props} />;
 };
 
 export const useGlobalContext = () => {
-    const context = useContext(GlobalContext);
-    if (!context) {
-        return false;
-    }
+  const context = useContext(GlobalContext);
+  if (!context) {
+    return false;
+  }
 
-    return context;
+  return context;
 };

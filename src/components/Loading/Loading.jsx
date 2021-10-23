@@ -3,15 +3,14 @@ import Loader from 'react-loader-spinner';
 import './Loading.sass';
 
 const Loading = () => (
-    <div className="loading__container" role="img">
-        <Loader
-            type="ThreeDots"
-            color="#000"
-            height={300}
-            width={300}
-        />
-    </div>
+  <div className="loading__container" role="img">
+    <Loader
+      type="ThreeDots"
+      color="#000"
+      height={300}
+      width={300}
+    />
+  </div>
 );
-
 
 export default Loading;
