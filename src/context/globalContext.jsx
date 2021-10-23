@@ -29,7 +29,7 @@ export const GlobalProvider = (props) => {
 export const useGlobalContext = () => {
     const context = useContext(GlobalContext);
     if (!context) {
-        throw new Error('useGlobalContext should be inside provider UserContext');
+        return false;
     }
 
     return context;

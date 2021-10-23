@@ -7,7 +7,7 @@ const ProductListItem = ({ id, picture, price, state, title }) => {
     const handleClick = () => history.push(`/items/${id}`);
 
     return (
-        <div className="product-list-item__container">
+        <div className="product-list-item__container" role="listitem">
             <img 
                 className="product-list-item__picture"
                 onClick={handleClick}

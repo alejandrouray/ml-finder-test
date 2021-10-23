@@ -3,7 +3,7 @@ import Loader from 'react-loader-spinner';
 import './Loading.sass';
 
 const Loading = () => (
-    <div className="loading__container">
+    <div className="loading__container" role="img">
         <Loader
             type="ThreeDots"
             color="#000"

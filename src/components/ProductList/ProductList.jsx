@@ -2,10 +2,10 @@ import React from 'react';
 import ProductListItem from '../ProductListItem/ProductListItem';
 import './ProductList.sass';
 
-const ProductList = ({ products }) => {
-    return (
-        <div className="product-list__container">
-            {products && products.map(x => 
+const ProductList = ({ products }) =>
+    products.length && Array.isArray(products) ? (
+        <div className="product-list__container" role="list">
+            {products.map(x => 
                 <ProductListItem
                     key={x.id}
                     id={x.id}
@@ -16,8 +16,7 @@ const ProductList = ({ products }) => {
                 />
             )}
         </div>
-    );
-};
+    ) : <></>;
 
 
 export default ProductList;
