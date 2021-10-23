@@ -1,0 +1,56 @@
+{
+    "items":[
+       {
+          "id":"MLA923157323",
+          "title":"Apple iPad Air De 10.9  Wi-fi  64gb Oro Rosa (4ª Generación)",
+          "price":{
+             "currency":"ARS",
+             "amount":106000,
+             "decimals":"00"
+          },
+          "condition":"new",
+          "free_shipping":true,
+          "picture":"http://http2.mlstatic.com/D_770655-MLA46962206249_082021-O.jpg",
+          "state_name":"Capital Federal"
+       },
+       {
+          "id":"MLA899551138",
+          "title":"Apple iPad De 10.2  Wi-fi  128gb Gris Espacial (8ª Generación)",
+          "price":{
+             "currency":"ARS",
+             "amount":85990,
+             "decimals":"00"
+          },
+          "condition":"new",
+          "free_shipping":true,
+          "picture":"http://http2.mlstatic.com/D_778868-MLA46245141273_062021-O.jpg",
+          "state_name":"Buenos Aires"
+       },
+       {
+          "id":"MLA725235643",
+          "title":"Mercado Pago Point Bluetooth - Lector De Tarjetas Mpos",
+          "price":{
+             "currency":"ARS",
+             "amount":189,
+             "decimals":"00"
+          },
+          "condition":"new",
+          "free_shipping":true,
+          "picture":"http://http2.mlstatic.com/D_820573-MLA44516553476_012021-O.jpg",
+          "state_name":"Capital Federal"
+       },
+       {
+          "id":"MLA929730385",
+          "title":"Smart Tv Samsung Series 7 Un58tu7000gczb Led 4k 58  220v - 240v",
+          "price":{
+             "currency":"ARS",
+             "amount":96999,
+             "decimals":"00"
+          },
+          "condition":"new",
+          "free_shipping":true,
+          "picture":"http://http2.mlstatic.com/D_768240-MLA45371723406_032021-O.jpg",
+          "state_name":"Capital Federal"
+       }
+    ]
+}
