@@ -13,6 +13,7 @@ const ProductList = ({ products }) => (products.length && Array.isArray(products
         price={x.price.amount}
         picture={x.picture}
         state={x.state_name}
+        freeShipping={x.free_shipping}
       />
     ))}
   </div>

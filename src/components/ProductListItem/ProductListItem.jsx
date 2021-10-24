@@ -5,7 +5,7 @@ import { formatCurrency } from '@utils/';
 import './ProductListItem.sass';
 
 const ProductListItem = ({
-  id, picture, price, state, title,
+  id, freeShipping, picture, price, state, title,
 }) => {
   const history = useHistory();
   const toProductPage = () => history.push(`/items/${id}`);
@@ -19,9 +19,10 @@ const ProductListItem = ({
         alt={title}
       />
       <div className="product_list_item__main">
-        <span className="product_list_item__main-price">
-          {formatCurrency(price)}
-        </span>
+        <div className="product_list_item__main-price-container">
+          <span className="product_list_item__main-price">{formatCurrency(price)}</span>
+          {freeShipping && <img src="shipping.png" alt="Shipping" />}
+        </div>
         <h2
           className="product_list_item__main-title"
           onClick={toProductPage}
@@ -36,6 +37,7 @@ const ProductListItem = ({
 
 ProductListItem.propTypes = {
   id: Proptypes.string.isRequired,
+  freeShipping: Proptypes.bool,
   picture: Proptypes.string,
   price: Proptypes.number,
   state: Proptypes.string,
@@ -43,6 +45,7 @@ ProductListItem.propTypes = {
 };
 
 ProductListItem.defaultProps = {
+  freeShipping: false,
   picture: './placeholder.png',
   price: 0,
   state: '',
