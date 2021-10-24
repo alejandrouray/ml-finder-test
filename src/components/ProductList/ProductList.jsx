@@ -22,7 +22,9 @@ ProductList.propTypes = {
   products: Proptypes.arrayOf(Proptypes.shape({
     id: Proptypes.string,
     title: Proptypes.string,
-    price: Proptypes.number,
+    price: Proptypes.shape({
+      amount: Proptypes.number,
+    }),
     picture: Proptypes.string,
     state: Proptypes.string,
   })),

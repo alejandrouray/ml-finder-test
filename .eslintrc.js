@@ -21,8 +21,11 @@ module.exports = {
     'jest',
   ],
   rules: {
+    'import/no-extraneous-dependencies': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/no-noninteractive-element-interactions': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
-    'import/no-extraneous-dependencies': 'off',
+    'react-hooks/exhaustive-deps': 'off',
   },
 };

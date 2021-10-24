@@ -5,6 +5,7 @@ import { fireEvent, render } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import ProductListItem from './ProductListItem';
 import mock from './ProductListItem.mock.json';
+import { formatCurrency } from '../../utils';
 
 describe('ProductList component', () => {
   const setup = () => {
@@ -18,7 +19,7 @@ describe('ProductList component', () => {
     const image = component.getByRole('img');
     const title = component.getByRole('heading');
     const state = component.getByText(mock.state);
-    const price = component.getByText(`$ ${mock.price}`);
+    const price = component.getByText(formatCurrency(mock.price));
 
     return {
       history, image, price, state, title,

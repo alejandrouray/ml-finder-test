@@ -6,7 +6,7 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import Home from './pages/Home/Home';
+import Home from 'home/Home';
 import Search from './pages/Search/Search';
 import Product from './pages/Product/Product';
 import NotFound from './pages/NotFound/NotFound';
