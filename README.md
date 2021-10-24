@@ -55,3 +55,8 @@ Ejecuta un análisis del código y corrige los errores encontrados según la con
   AUTHOR_NAME=[Acá colocar tu nombre] \
   AUTHOR_LAST_NAME=[Acá colocar tu apellido]
   
+#### 4. En la carpeta `api` ejecutar `npm install` y luego `npm run start`
+
+#### 5. Realizar el paso 4 en la carpeta raíz del proyecto.
+
+#### ¡Listo! Debería ver una pantalla de inicio en [http://localhost:3000](http://localhost:3000)
