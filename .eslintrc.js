@@ -44,9 +44,11 @@ module.exports = {
     },
   },
   rules: {
+    'global-require': 'off',
     'import/no-extraneous-dependencies': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'no-unused-expressions': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react-hooks/exhaustive-deps': 'off',

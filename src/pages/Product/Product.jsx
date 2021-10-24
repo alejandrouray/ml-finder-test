@@ -27,7 +27,7 @@ const Product = () => {
       else history.push('/notFound');
     };
 
-    if (!product.id) getInitialData();
+    !product.id && getInitialData();
   }, []);
 
   return (

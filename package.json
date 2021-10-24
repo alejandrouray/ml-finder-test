@@ -21,20 +21,25 @@
   },
   "jest": {
     "moduleNameMapper": {
+      "@App": "<rootDir>/src/App",
       "@context/(.*)": "<rootDir>/src/context/$1",
       "@components/breadcrumb": "<rootDir>/src/components/Breadcrumb/Breadcrumb",
       "@components/error": "<rootDir>/src/components/Error/Error",
       "@components/loading": "<rootDir>/src/components/Loading/Loading",
       "@components/productList": "<rootDir>/src/components/ProductList/ProductList",
       "@components/productListItem": "<rootDir>/src/components/ProductListItem/ProductListItem",
+      "@components/searchBar": "<rootDir>/src/components/SearchBar/SearchBar",
+      "@pages/home": "<rootDir>/src/pages/Home/Home",
       "@pages/notFound": "<rootDir>/src/pages/NotFound/NotFound",
+      "@pages/product": "<rootDir>/src/pages/Product/Product",
+      "@pages/search": "<rootDir>/src/pages/Search/Search",
       "@utils/(.*)": "<rootDir>/src/utils/$1"
     }
   },
   "scripts": {
     "start": "craco start",
     "build": "react-scripts build",
-    "coverage": "npm run test -- --coverage",
+    "coverage": "npm run test src/* -- --coverage",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "eslint src server",
