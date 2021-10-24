@@ -1,3 +1,4 @@
+/* eslint-disable no-irregular-whitespace */
 import express from 'express';
 import dotenv from 'dotenv';
 import fetch from 'node-fetch';
@@ -14,7 +15,7 @@ const author = {
   lastName: AUTHOR_LAST_NAME,
 };
 
-const fetchAPI = async (url) => await (await fetch(`${ML_ENDPOINT}/${url}/`)).json();
+const fetchAPI = async (url) => (await fetch(`${ML_ENDPOINT}/${url}/`)).json();
 
 const getPictureFromItem = async (id, previous) => {
   const findPicture = (pictures) => pictures.find((x) => x.url).url;
