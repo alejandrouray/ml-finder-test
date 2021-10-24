@@ -6,13 +6,13 @@ import {
   Redirect,
 } from 'react-router-dom';
 
-import Home from 'home/Home';
-import Search from './pages/Search/Search';
-import Product from './pages/Product/Product';
-import NotFound from './pages/NotFound/NotFound';
+import Home from '@pages/home';
+import Search from '@pages/search';
+import Product from '@pages/product';
+import NotFound from '@pages/notFound';
 
-import SearchBar from './components/SearchBar/SearchBar';
-import { GlobalProvider } from './context/globalContext';
+import SearchBar from '@components/searchBar';
+import { GlobalProvider } from '@context/globalContext';
 
 export default function App() {
   return (

@@ -12,7 +12,9 @@ export const formatCurrency = (price) => new Intl
     maximumFractionDigits: 0,
   })
   .format(parseInt(price, 10))
-  .replace(',', '.');
+  .replace(',', '.')
+  .split('$')
+  .join('$ ');
 
 export const useQuery = () => new URLSearchParams(useLocation().search);
 

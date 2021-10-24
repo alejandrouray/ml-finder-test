@@ -4,10 +4,10 @@ import '@testing-library/jest-dom/extend-expect';
 import { render, screen, waitFor } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
 import fetchMock from 'jest-fetch-mock';
-import { GlobalProvider } from '../../context/globalContext';
+import { GlobalProvider } from '@context/globalContext';
+import NotFound from '@pages/notFound';
 import Product from './Product';
 import productMock from './Product.mock.json';
-import NotFound from '../NotFound/NotFound';
 
 fetchMock.enableMocks();
 

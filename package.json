@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@craco/craco": "^6.3.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
@@ -18,8 +19,20 @@
     "web-vitals": "^1.1.2",
     "webpack": "^4.44.2"
   },
+  "jest": {
+    "moduleNameMapper": {
+      "@context/(.*)": "<rootDir>/src/context/$1",
+      "@components/breadcrumb": "<rootDir>/src/components/Breadcrumb/Breadcrumb",
+      "@components/error": "<rootDir>/src/components/Error/Error",
+      "@components/loading": "<rootDir>/src/components/Loading/Loading",
+      "@components/productList": "<rootDir>/src/components/ProductList/ProductList",
+      "@components/productListItem": "<rootDir>/src/components/ProductListItem/ProductListItem",
+      "@pages/notFound": "<rootDir>/src/pages/NotFound/NotFound",
+      "@utils/(.*)": "<rootDir>/src/utils/$1"
+    }
+  },
   "scripts": {
-    "start": "react-app-rewired start",
+    "start": "craco start",
     "build": "react-scripts build",
     "coverage": "npm run test -- --coverage",
     "test": "react-scripts test",
@@ -48,6 +61,7 @@
   "devDependencies": {
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
+    "eslint-import-resolver-alias": "^1.1.2",
     "eslint-plugin-import": "^2.25.2",
     "eslint-plugin-jest": "^25.2.2",
     "eslint-plugin-jsx-a11y": "^6.4.1",

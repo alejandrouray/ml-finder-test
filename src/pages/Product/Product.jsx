@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useHistory, useParams } from 'react-router-dom';
-import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
-import Loading from '../../components/Loading/Loading';
-import { useGlobalContext } from '../../context/globalContext';
+
+import { useGlobalContext } from '@context/globalContext';
 import {
   fetchAPI, formatCurrency, setCondition, setDescription,
-} from '../../utils';
+} from '@utils/';
+
+import Breadcrumb from '@components/breadcrumb';
+import Loading from '@components/loading';
+
 import './Product.sass';
 
 const Product = () => {
@@ -20,8 +23,8 @@ const Product = () => {
         () => fetchAPI(`items/${id}`),
       );
 
-      if (!response.item) history.push('/notFound');
-      setProduct(response.item);
+      if (response.item) setProduct(response.item);
+      else history.push('/notFound');
     };
 
     if (!product.id) getInitialData();

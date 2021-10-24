@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import Proptypes from 'prop-types';
-import { useGlobalContext } from '../../context/globalContext';
+import { useGlobalContext } from '@context/globalContext';
 import './Breadcrumb.sass';
 
 const Breadcrumb = ({ categories }) => {

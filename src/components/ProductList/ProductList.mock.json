@@ -4,12 +4,8 @@
           "id":"MLA735941139",
           "title":"Nuevo Roku Express Smart Tv Hdmi Netflix Youtube Streaming C/ Remoto",
           "price":{
-             "currency":"ARS",
-             "amount":6369.09,
-             "decimals":"09"
+             "amount":6369.09
           },
-          "condition":"new",
-          "free_shipping":true,
           "picture":"http://http2.mlstatic.com/D_698389-MLA30206708924_052019-O.jpg",
           "state_name":"Capital Federal"
        },
@@ -17,12 +13,8 @@
           "id":"MLA923157323",
           "title":"Apple iPad Air De 10.9  Wi-fi  64gb Oro Rosa (4ª Generación)",
           "price":{
-             "currency":"ARS",
-             "amount":108000,
-             "decimals":"00"
+             "amount":108000
           },
-          "condition":"new",
-          "free_shipping":true,
           "picture":"http://http2.mlstatic.com/D_770655-MLA46962206249_082021-O.jpg",
           "state_name":"Capital Federal"
        },
@@ -30,12 +22,8 @@
           "id":"MLA899551138",
           "title":"Apple iPad De 10.2  Wi-fi  128gb Gris Espacial (8ª Generación)",
           "price":{
-             "currency":"ARS",
-             "amount":85990,
-             "decimals":"00"
+             "amount":85990
           },
-          "condition":"new",
-          "free_shipping":true,
           "picture":"http://http2.mlstatic.com/D_778868-MLA46245141273_062021-O.jpg",
           "state_name":"Buenos Aires"
        },
@@ -43,12 +31,8 @@
           "id":"MLA725235643",
           "title":"Mercado Pago Point Bluetooth - Lector De Tarjetas Mpos",
           "price":{
-             "currency":"ARS",
-             "amount":189,
-             "decimals":"00"
+             "amount":189
           },
-          "condition":"new",
-          "free_shipping":true,
           "picture":"http://http2.mlstatic.com/D_820573-MLA44516553476_012021-O.jpg",
           "state_name":"Capital Federal"
        }

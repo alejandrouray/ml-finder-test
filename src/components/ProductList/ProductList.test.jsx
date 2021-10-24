@@ -1,7 +1,7 @@
 import React from 'react';
 import '@testing-library/jest-dom/extend-expect';
 import { render } from '@testing-library/react';
-import ProductList from './ProductList';
+import ProductList from '@components/productList';
 import mock from './ProductList.mock.json';
 
 describe('ProductList component', () => {
@@ -13,7 +13,5 @@ describe('ProductList component', () => {
 
   test('It should return an empty element if the products prop do not contain valid data', () => {
     expect(render(<ProductList products={[]} />).container).toBeEmptyDOMElement();
-    expect(render(<ProductList products="" />).container).toBeEmptyDOMElement();
-    expect(render(<ProductList products="Not valid data" />).container).toBeEmptyDOMElement();
   });
 });

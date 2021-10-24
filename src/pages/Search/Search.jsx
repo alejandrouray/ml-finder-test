@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react';
 
-import Breadcrumb from '../../components/Breadcrumb/Breadcrumb';
-import ProductList from '../../components/ProductList/ProductList';
-import Loading from '../../components/Loading/Loading';
-import Error from '../../components/Error/Error';
+import Breadcrumb from '@components/breadcrumb';
+import ProductList from '@components/productList';
+import Loading from '@components/loading';
+import Error from '@components/error';
 
-import { fetchAPI, useQuery } from '../../utils';
-import { useGlobalContext } from '../../context/globalContext';
+import { fetchAPI, useQuery } from '@utils/';
+import { useGlobalContext } from '@context/globalContext';
 
 import './Search.sass';
 

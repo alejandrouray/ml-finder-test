@@ -20,6 +20,29 @@ module.exports = {
     'react',
     'jest',
   ],
+  settings: {
+    'import/extensions': ['.js', '.jsx', '.ts', '.tsx', '.mjs'],
+    'import/resolver': {
+      alias: {
+        map: [
+          ['@App', './src/App'],
+          ['@components/breadcrumb', './src/components/Breadcrumb/Breadcrumb'],
+          ['@components/error', './src/components/Error/Error'],
+          ['@components/loading', './src/components/Loading/Loading'],
+          ['@components/searchBar', './src/components/SearchBar/SearchBar'],
+          ['@components/productList', './src/components/ProductList/ProductList'],
+          ['@components/productListItem', './src/components/ProductListItem/ProductListItem'],
+          ['@context', './src/context/'],
+          ['@pages/home', './src/pages/Home/Home'],
+          ['@pages/search', './src/pages/Search/Search'],
+          ['@pages/product', './src/pages/Product/Product'],
+          ['@pages/notFound', './src/pages/NotFound/NotFound'],
+          ['@utils', './src/utils'],
+        ],
+        extensions: ['.js', '.jsx', '.json'],
+      },
+    },
+  },
   rules: {
     'import/no-extraneous-dependencies': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
@@ -27,5 +50,16 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/jsx-props-no-spreading': 'off',
     'react-hooks/exhaustive-deps': 'off',
+    'import/extensions': [
+      'error',
+      'ignorePackages',
+      {
+        js: 'never',
+        jsx: 'never',
+        ts: 'never',
+        tsx: 'never',
+        '': 'never',
+      },
+    ],
   },
 };

@@ -3,9 +3,9 @@ import { Router } from 'react-router-dom';
 import '@testing-library/jest-dom/extend-expect';
 import { fireEvent, render } from '@testing-library/react';
 import { createMemoryHistory } from 'history';
+import { formatCurrency } from '@utils/';
 import ProductListItem from './ProductListItem';
 import mock from './ProductListItem.mock.json';
-import { formatCurrency } from '../../utils';
 
 describe('ProductList component', () => {
   const setup = () => {

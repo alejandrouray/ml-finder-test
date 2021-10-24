@@ -1,7 +1,7 @@
 import React from 'react';
 import Proptypes from 'prop-types';
 import { useHistory } from 'react-router-dom';
-import { formatCurrency } from '../../utils';
+import { formatCurrency } from '@utils/';
 import './ProductListItem.sass';
 
 const ProductListItem = ({

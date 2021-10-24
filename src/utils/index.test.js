@@ -37,7 +37,7 @@ describe('Utils', () => {
     const currencyA = formatCurrency(9998);
     const currencyB = formatCurrency(10098.00);
 
-    expect(currencyA).toBe('$9.998');
-    expect(currencyB).toBe('$10.098');
+    expect(currencyA).toBe('$ 9.998');
+    expect(currencyB).toBe('$ 10.098');
   });
 });
