@@ -1,6 +1,6 @@
 # ML Finder Test
 
-Es un proyecto creado en React y Nodejs. Utiliza SASS para el manejo de estilos.
+Es buscador de productos de Mercado Libre hecho en React y Nodejs. Realiza peticiones a la API de Mercado Libre para obtener información de los productos consultados y representa la información en componentes dinámicos dentro del navegador.
 
 ## Scripts Disponibles
 
