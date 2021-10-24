@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# ML Finder Test
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Es un proyecto creado en React y Nodejs. Utiliza SASS para el manejo de estilos.
 
 ## Available Scripts
 
