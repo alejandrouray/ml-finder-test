@@ -40,15 +40,15 @@ Ejecuta un análisis del código y corrige los errores encontrados según la con
 
 ## Implementación en ambiente de desarrollo
 
-1. Debemos realizar el clone del repositorio:
+### 1. Debemos realizar el clone del repositorio:
   
 `git clone https://github.com/alejandrouray/ml-finder-test.git`
 
-2. Luego debemos ir a la carpeta del proyecto `ml-finder-test` y crear un archivo .env con el siguiente contenido:
+### 2. Luego debemos ir a la carpeta del proyecto `ml-finder-test` y crear un archivo .env con el siguiente contenido:
 
   REACT_APP_API_ENDPOINT=http://localhost:5000/api
   
-3. Dentro de la carpeta `ml-finder-test` se encuentra la carpeta `api`. Debemos crear otro archivo .env con el siguiente contenido:
+### 3. Dentro de la carpeta `ml-finder-test` se encuentra la carpeta `api`. Debemos crear otro archivo .env con el siguiente contenido:
 
   PORT=5000 \
   ML_ENDPOINT=https://api.mercadolibre.com \
